@@ -47,8 +47,7 @@ Permanent Dirt and Mud takes priority when both settings are enabled. Turn both 
 - Coverage is stored in memory, not in the game's save files. It does not persist between game sessions and may reset when switching vehicles or loading new areas.
 - The mod tracks vehicle presentation objects, including non-player vehicles. Reused object addresses may retain coverage from a previous object. The tracking table holds up to 2,048 objects.
 - The 10x setting scales individual reductions; it is not a fixed tenfold increase in real-world drying time.
-- The hooks target a specific FH2 executable build (dated 2015-11-25). If the expected instruction bytes do not match, the mod skips hook installation.
-- Compatibility with every other mod and game build has not been verified.
+- Compatibility with every other mod has not been verified (should be fine with most popular mods).
 
 ## How it works
 
