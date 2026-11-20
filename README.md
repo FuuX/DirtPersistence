@@ -74,17 +74,19 @@ The original functions receive the adjusted values. The game's executable file a
 
 ### Requirements
 
-- Zig with its C++ compiler driver (`zig c++`) available on PATH: [Download Zig](https://ziglang.org/download/).
-- Git (optional if downloading the source and header manually).
+- **Zig 0.15.1 (recommended)** — [Download Zig](https://ziglang.org/download/). Make sure Zig is available on your system PATH.
+- Git (optional if downloading the source files manually).
 - `FH2_DirtPersistence.cpp` from this repository.
-- `fh2mod.h` from the FH2 Mod Platform's `include` directory (use the compatible API 9 header).
-- Windows x64 is the build target.
+- `fh2mod.h` from the FH2 Mod Platform's `include` directory (compatible API 9 header).
+- Windows x64.
 
-Visual Studio, MSVC and CMake are not required for this Zig build. Zig provides the Windows GNU target toolchain and headers.
+Visual Studio, MSVC and CMake are not required. Zig provides the necessary C++ compiler, Windows headers and linker.
 
 ### Compile
 
-Open PowerShell in the source directory. Place `fh2mod.h` next to `FH2_DirtPersistence.cpp` (rename the downloaded versioned source to this filename if necessary), then run:
+Place `fh2mod.h` in the same directory as `FH2_DirtPersistence.cpp`.
+
+Open PowerShell in the source directory and run:
 
 ```powershell
 zig version
@@ -92,9 +94,10 @@ New-Item -ItemType Directory -Force build | Out-Null
 zig c++ -target x86_64-windows-gnu -shared -O2 -std=c++17 -I. FH2_DirtPersistence.cpp -o build/DirtPersistence.dll
 ```
 
-Copy `build\DirtPersistence.dll` into the Azimuth folder's `fh2-mods` directory.
+Once the build is complete, copy `build/DirtPersistence.dll` into the `fh2-mods` directory inside your Azimuth installation.
 
-This command follows the project's existing Zig build script. A specific minimum Zig version and the v1.0.0 build have not been independently verified here.
+Launch Forza Horizon 2 and configure the mod under **MODS > YOUR MODS > DirtPersistence**.
+
 
 ## Troubleshooting
 
