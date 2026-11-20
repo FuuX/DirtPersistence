@@ -2,6 +2,16 @@
 
 Dirt and mud stay visible on cars for longer in **Forza Horizon 2** (Azimuth). Built on the **FH2 Mod Platform**. It's cosmetic: vehicle handling and the game's save data are unchanged by the mod.
 
+
+## Screenshots
+
+<p align="center">
+  <img src="mod4.jpg" width="49%" alt="Alfa Romeo dirt accumulation" />
+  <img src="mod7.jpg" width="49%" alt="Range Rover mud retention" />
+  <img src="mod12.jpg" width="49%" alt="Audi dirt persistence" />
+  <img src="mod13.jpg" width="49%" alt="BMW dirt persistence" />
+</p>
+
 ## What it does
 
 - **Reduced Dirt and Mud Fade (10x):** applies only 10% of each reduction in the game's simulated dirt and mud coverage, while allowing new dirt and mud to accumulate immediately.
