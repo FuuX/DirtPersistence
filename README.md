@@ -46,8 +46,8 @@ Settings are saved in `fh2-mods\DirtPersistence.ini` when changed (assuming the 
 
 | Setting | Range | Default |
 |---|---|---|
-| Reduced Dirt and Mud Fade (10x) | On / Off | On |
-| Permanent Dirt and Mud | On / Off | Off |
+| Reduced Dirt and Mud Fade (10x) | On / Off | Off |
+| Permanent Dirt and Mud | On / Off | On |
 
 Permanent Dirt and Mud takes priority when both settings are enabled. Turn both off to restore normal visual dirt and mud behavior. Changing either setting clears the mod's tracked coverage history.
 

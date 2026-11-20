@@ -20,8 +20,8 @@ static const FH2ModApi *g_api;
 static FH2Mod *g_mod;
 static unsigned char *g_game;
 static char g_ini[MAX_PATH];
-static volatile LONG g_slow = 1;
-static volatile LONG g_permanent = 0;
+static volatile LONG g_slow = 0;
+static volatile LONG g_permanent = 1;
 static SRWLOCK g_lock = SRWLOCK_INIT;
 
 typedef struct DirtState {
@@ -182,8 +182,8 @@ FH2MOD_EXPORT int fh2mod_init(const FH2ModApi *api) {
     GetModuleFileNameA(self, g_ini, MAX_PATH);
     char *dot = strrchr(g_ini, '.');
     if (dot) strcpy(dot, ".ini");
-    g_slow = GetPrivateProfileIntA("settings", "SlowDirt", 1, g_ini) ? 1 : 0;
-    g_permanent = GetPrivateProfileIntA("settings", "PermanentDirt", 0, g_ini) ? 1 : 0;
+    g_slow = GetPrivateProfileIntA("settings", "SlowDirt", 0, g_ini) ? 1 : 0;
+    g_permanent = GetPrivateProfileIntA("settings", "PermanentDirt", 1, g_ini) ? 1 : 0;
 
     FH2Setting a = {};
     a.size = sizeof(a);
